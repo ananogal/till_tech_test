@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		932C9CA31ABB1C88002E7AA0 /* hipstercoffee.json in Resources */ = {isa = PBXBuildFile; fileRef = 932C9CA21ABB1C88002E7AA0 /* hipstercoffee.json */; };
 		938A05D21ABB0172000309B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938A05D11ABB0172000309B9 /* AppDelegate.swift */; };
 		938A05D41ABB0172000309B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938A05D31ABB0172000309B9 /* ViewController.swift */; };
 		938A05D71ABB0172000309B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938A05D51ABB0172000309B9 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		17318C9F01CA80CB353FBAA0 /* Pods_TillTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TillTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26C8EA855F0EDBAEE470B876 /* Pods-TillTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TillTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TillTests/Pods-TillTests.release.xcconfig"; sourceTree = "<group>"; };
 		607E64AA4FA4D98DDE8F74E4 /* Pods-TillTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TillTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TillTests/Pods-TillTests.debug.xcconfig"; sourceTree = "<group>"; };
+		932C9CA21ABB1C88002E7AA0 /* hipstercoffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = hipstercoffee.json; path = Till/hipstercoffee.json; sourceTree = "<group>"; };
 		938A05CC1ABB0172000309B9 /* Till.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Till.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		938A05D01ABB0172000309B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		938A05D11ABB0172000309B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		938A05C31ABB0172000309B9 = {
 			isa = PBXGroup;
 			children = (
+				932C9CA21ABB1C88002E7AA0 /* hipstercoffee.json */,
 				938A05CE1ABB0172000309B9 /* Till */,
 				938A05E41ABB0173000309B9 /* TillTests */,
 				938A05CD1ABB0172000309B9 /* Products */,
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				938A05D71ABB0172000309B9 /* Main.storyboard in Resources */,
+				932C9CA31ABB1C88002E7AA0 /* hipstercoffee.json in Resources */,
 				938A05DC1ABB0173000309B9 /* LaunchScreen.xib in Resources */,
 				938A05D91ABB0172000309B9 /* Images.xcassets in Resources */,
 			);
