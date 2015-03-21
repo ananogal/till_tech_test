@@ -3,10 +3,12 @@ import UIKit
 
 public class TillViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    var products: ProductsRepository!
+    public var shopRepo: ShopRepository!
+    public var shop: Shop!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        shopRepo = ShopRepository()
     }
 
     public override func didReceiveMemoryWarning() {
@@ -22,11 +24,5 @@ public class TillViewController: UIViewController, UICollectionViewDataSource, U
         
         return cell
     }
-    
-    public func getProducts() -> Array<Product>{
-        products = ProductsRepository()
-        return products.getAll()
-    }
-    
 }
 

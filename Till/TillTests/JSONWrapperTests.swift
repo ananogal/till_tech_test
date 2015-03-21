@@ -3,18 +3,20 @@ import Nimble
 import Till
 
 class FakeJsonWrapper:JSONWrapper{
-    override func wrapp(data: NSData) -> NSDictionary{
-        return NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+    var wrappWasCalled = false
+    
+    override func wrapp(data: NSData) -> Dictionary<String, AnyObject>{
+        wrappWasCalled = true
+        return Dictionary<String, AnyObject>()
     }
 }
 
 class JSONWrapperTests: QuickSpec {
     override func spec() {
-        it("should return an NSDictionary"){
+        it("should return an Dictionary"){
             let wrapper = FakeJsonWrapper()
-            let data = "[{\"hello\":2.0}]".dataUsingEncoding(NSUTF8StringEncoding)!
-            let expectedValue = ["hello" :2.0] as NSDictionary
-            expect(wrapper.wrapp(data)).to(equal(expectedValue))
+            wrapper.wrapp(NSData())
+            expect(wrapper.wrappWasCalled).to(beTrue())
         }
     }
 }

@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		04E0F7801ABC2D08003A0D8A /* TillViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0F77F1ABC2D08003A0D8A /* TillViewControllerTests.swift */; };
-		04E0F7821ABC31B9003A0D8A /* ProdutsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0F7811ABC31B9003A0D8A /* ProdutsRepository.swift */; };
+		04E0F7821ABC31B9003A0D8A /* ShopRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0F7811ABC31B9003A0D8A /* ShopRepository.swift */; };
 		04E0F7841ABC3238003A0D8A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0F7831ABC3238003A0D8A /* Product.swift */; };
-		04E0F7861ABC3313003A0D8A /* ProductsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0F7851ABC3313003A0D8A /* ProductsRepositoryTests.swift */; };
+		04E0F7861ABC3313003A0D8A /* ShopRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0F7851ABC3313003A0D8A /* ShopRepositoryTests.swift */; };
 		04E0F7891ABC386A003A0D8A /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0F7881ABC386A003A0D8A /* FileReader.swift */; };
 		04E0F78B1ABC388D003A0D8A /* FileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0F78A1ABC388D003A0D8A /* FileReaderTests.swift */; };
 		04E0F78D1ABC935B003A0D8A /* JSONWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0F78C1ABC935B003A0D8A /* JSONWrapperTests.swift */; };
@@ -21,6 +21,7 @@
 		938A05D71ABB0172000309B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938A05D51ABB0172000309B9 /* Main.storyboard */; };
 		938A05D91ABB0172000309B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938A05D81ABB0172000309B9 /* Images.xcassets */; };
 		938A05DC1ABB0173000309B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938A05DA1ABB0173000309B9 /* LaunchScreen.xib */; };
+		93E710181ABE298D00BC8370 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E710171ABE298D00BC8370 /* Shop.swift */; };
 		C4F1C1CB38EF0E9D572D70F7 /* Pods_TillTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17318C9F01CA80CB353FBAA0 /* Pods_TillTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -36,9 +37,9 @@
 
 /* Begin PBXFileReference section */
 		04E0F77F1ABC2D08003A0D8A /* TillViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TillViewControllerTests.swift; sourceTree = "<group>"; };
-		04E0F7811ABC31B9003A0D8A /* ProdutsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutsRepository.swift; sourceTree = "<group>"; };
+		04E0F7811ABC31B9003A0D8A /* ShopRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopRepository.swift; sourceTree = "<group>"; };
 		04E0F7831ABC3238003A0D8A /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		04E0F7851ABC3313003A0D8A /* ProductsRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsRepositoryTests.swift; sourceTree = "<group>"; };
+		04E0F7851ABC3313003A0D8A /* ShopRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopRepositoryTests.swift; sourceTree = "<group>"; };
 		04E0F7881ABC386A003A0D8A /* FileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 		04E0F78A1ABC388D003A0D8A /* FileReaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileReaderTests.swift; sourceTree = "<group>"; };
 		04E0F78C1ABC935B003A0D8A /* JSONWrapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONWrapperTests.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		938A05DB1ABB0173000309B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		938A05E11ABB0173000309B9 /* TillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TillTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		938A05E61ABB0173000309B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93E710171ABE298D00BC8370 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +82,11 @@
 		04E0F7871ABC384B003A0D8A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				04E0F7811ABC31B9003A0D8A /* ProdutsRepository.swift */,
+				04E0F7811ABC31B9003A0D8A /* ShopRepository.swift */,
 				04E0F7831ABC3238003A0D8A /* Product.swift */,
 				04E0F7881ABC386A003A0D8A /* FileReader.swift */,
 				04E0F78E1ABC941A003A0D8A /* JSONWrapper.swift */,
+				93E710171ABE298D00BC8370 /* Shop.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -144,7 +147,7 @@
 			children = (
 				938A05E51ABB0173000309B9 /* Supporting Files */,
 				04E0F77F1ABC2D08003A0D8A /* TillViewControllerTests.swift */,
-				04E0F7851ABC3313003A0D8A /* ProductsRepositoryTests.swift */,
+				04E0F7851ABC3313003A0D8A /* ShopRepositoryTests.swift */,
 				04E0F78A1ABC388D003A0D8A /* FileReaderTests.swift */,
 				04E0F78C1ABC935B003A0D8A /* JSONWrapperTests.swift */,
 			);
@@ -324,7 +327,8 @@
 				04E0F78F1ABC941A003A0D8A /* JSONWrapper.swift in Sources */,
 				04E0F7891ABC386A003A0D8A /* FileReader.swift in Sources */,
 				04E0F7841ABC3238003A0D8A /* Product.swift in Sources */,
-				04E0F7821ABC31B9003A0D8A /* ProdutsRepository.swift in Sources */,
+				93E710181ABE298D00BC8370 /* Shop.swift in Sources */,
+				04E0F7821ABC31B9003A0D8A /* ShopRepository.swift in Sources */,
 				938A05D21ABB0172000309B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,7 +339,7 @@
 			files = (
 				04E0F78B1ABC388D003A0D8A /* FileReaderTests.swift in Sources */,
 				04E0F7801ABC2D08003A0D8A /* TillViewControllerTests.swift in Sources */,
-				04E0F7861ABC3313003A0D8A /* ProductsRepositoryTests.swift in Sources */,
+				04E0F7861ABC3313003A0D8A /* ShopRepositoryTests.swift in Sources */,
 				04E0F78D1ABC935B003A0D8A /* JSONWrapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

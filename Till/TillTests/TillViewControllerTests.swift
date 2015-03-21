@@ -16,9 +16,12 @@ class TillViewControllerTests: QuickSpec {
                 let _ = controller.view
             }
             
-            it("loads Products into collection"){
-                let products = controller.getProducts()
-                expect(products.count) > 0
+            it("Should initialise a ShopRepository") {
+                expect(controller.shopRepo).toNot(beNil())
+            }
+            
+            it("Should initialise a shop Entity"){
+                expect(controller.shop).toNot(beNil())
             }
         }
     }

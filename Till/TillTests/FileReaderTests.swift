@@ -3,17 +3,21 @@ import Nimble
 import Till
 
 class FakeFileReader :FileReader {
-    func readJson(filename:String) -> NSData{
-        return "Read from file".dataUsingEncoding(NSUTF8StringEncoding)!
+    var readJsonWasCalled = false
+    
+    override func readJson(fileName: String) -> NSData {
+        readJsonWasCalled = true
+        return NSData()
     }
+    
 }
 
 class FileReaderTests: QuickSpec {
     override func spec() {
-        it("Should read a file an return an NSData") {
+        it("Should read a JSON file") {
             let reader = FakeFileReader()
-            var expectedValue = "Read from file".dataUsingEncoding(NSUTF8StringEncoding)!
-            expect(reader.readJson("text.json")).to(equal(expectedValue))
+            reader.readJson("file.json")
+            expect(reader.readJsonWasCalled).to(beTrue())
         }
     }
 }
