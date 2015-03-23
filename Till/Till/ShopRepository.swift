@@ -1,7 +1,8 @@
+import Foundation
 
 public class ShopRepository {
 
-    let filename = "hipstercoffee.json"
+    let filename = "hipstercoffee"
     public var fileReader : FileReader
     public var jsonWrapper: JSONWrapper
     
@@ -13,11 +14,27 @@ public class ShopRepository {
     public func getAll()-> Shop {
         let data = self.fileReader.readJson(filename)
         let dict = self.jsonWrapper.wrapp(data)
+        let shop = createEntitiesFromDictionary(dict)
         
-        return Shop(name: dict["shopName"] as String, address:dict["address"] as String, phone: dict["phone"] as String, products:[Product]())
+        return shop
     }
     
-    private func createEntitiesFromDictionary(dict:Dictionary<String, AnyObject>){
+    private func createEntitiesFromDictionary(dict:NSDictionary) -> Shop {
+        var products = [Product]()
+        let arrProds = dict["prices"] as NSArray
+        if let dictProducts = arrProds[0] as? NSDictionary {
+            for prod  in dictProducts {
+                let name:String = (prod.key as AnyObject? as? String) ?? ""
+                let price = (prod.value as AnyObject? as? Float) ?? 0
+                let product = Product(name: name , price: price)
+                products.append(product)
+            }
+        }
+        let shopName = dict["shopName"] as String
+        let address = dict["address"] as String
+        let phone = dict["phone"] as String
+        var shop = Shop(name: shopName , address: address, phone: phone, products: products)
         
+        return shop
     }
 }

@@ -1,5 +1,5 @@
 
-public class Shop{
+public struct Shop{
     
     var shopName: String
     var address: String
@@ -12,5 +12,4 @@ public class Shop{
         self.phone = phone
         self.products = products
     }
-    
 }
