@@ -21,6 +21,10 @@
 		938A05D71ABB0172000309B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938A05D51ABB0172000309B9 /* Main.storyboard */; };
 		938A05D91ABB0172000309B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938A05D81ABB0172000309B9 /* Images.xcassets */; };
 		938A05DC1ABB0173000309B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938A05DA1ABB0173000309B9 /* LaunchScreen.xib */; };
+		938FC5F51AC1898D00FE8DC6 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC5F41AC1898D00FE8DC6 /* Order.swift */; };
+		938FC5F71AC18A1C00FE8DC6 /* OrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC5F61AC18A1C00FE8DC6 /* OrderTests.swift */; };
+		938FC5F91AC1928000FE8DC6 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC5F81AC1928000FE8DC6 /* OrderItem.swift */; };
+		938FC5FB1AC192A200FE8DC6 /* OrderItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC5FA1AC192A200FE8DC6 /* OrderItemTests.swift */; };
 		93E710181ABE298D00BC8370 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E710171ABE298D00BC8370 /* Shop.swift */; };
 		C4F1C1CB38EF0E9D572D70F7 /* Pods_TillTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17318C9F01CA80CB353FBAA0 /* Pods_TillTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -57,6 +61,10 @@
 		938A05DB1ABB0173000309B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		938A05E11ABB0173000309B9 /* TillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TillTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		938A05E61ABB0173000309B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		938FC5F41AC1898D00FE8DC6 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		938FC5F61AC18A1C00FE8DC6 /* OrderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTests.swift; sourceTree = "<group>"; };
+		938FC5F81AC1928000FE8DC6 /* OrderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
+		938FC5FA1AC192A200FE8DC6 /* OrderItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItemTests.swift; sourceTree = "<group>"; };
 		93E710171ABE298D00BC8370 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +95,8 @@
 				04E0F7881ABC386A003A0D8A /* FileReader.swift */,
 				04E0F78E1ABC941A003A0D8A /* JSONWrapper.swift */,
 				93E710171ABE298D00BC8370 /* Shop.swift */,
+				938FC5F41AC1898D00FE8DC6 /* Order.swift */,
+				938FC5F81AC1928000FE8DC6 /* OrderItem.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -145,11 +155,13 @@
 		938A05E41ABB0173000309B9 /* TillTests */ = {
 			isa = PBXGroup;
 			children = (
-				938A05E51ABB0173000309B9 /* Supporting Files */,
-				04E0F77F1ABC2D08003A0D8A /* TillViewControllerTests.swift */,
-				04E0F7851ABC3313003A0D8A /* ShopRepositoryTests.swift */,
 				04E0F78A1ABC388D003A0D8A /* FileReaderTests.swift */,
 				04E0F78C1ABC935B003A0D8A /* JSONWrapperTests.swift */,
+				04E0F7851ABC3313003A0D8A /* ShopRepositoryTests.swift */,
+				938A05E51ABB0173000309B9 /* Supporting Files */,
+				04E0F77F1ABC2D08003A0D8A /* TillViewControllerTests.swift */,
+				938FC5F61AC18A1C00FE8DC6 /* OrderTests.swift */,
+				938FC5FA1AC192A200FE8DC6 /* OrderItemTests.swift */,
 			);
 			path = TillTests;
 			sourceTree = "<group>";
@@ -325,6 +337,8 @@
 			files = (
 				938A05D41ABB0172000309B9 /* TillViewController.swift in Sources */,
 				04E0F78F1ABC941A003A0D8A /* JSONWrapper.swift in Sources */,
+				938FC5F91AC1928000FE8DC6 /* OrderItem.swift in Sources */,
+				938FC5F51AC1898D00FE8DC6 /* Order.swift in Sources */,
 				04E0F7891ABC386A003A0D8A /* FileReader.swift in Sources */,
 				04E0F7841ABC3238003A0D8A /* Product.swift in Sources */,
 				93E710181ABE298D00BC8370 /* Shop.swift in Sources */,
@@ -337,8 +351,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938FC5F71AC18A1C00FE8DC6 /* OrderTests.swift in Sources */,
 				04E0F78B1ABC388D003A0D8A /* FileReaderTests.swift in Sources */,
 				04E0F7801ABC2D08003A0D8A /* TillViewControllerTests.swift in Sources */,
+				938FC5FB1AC192A200FE8DC6 /* OrderItemTests.swift in Sources */,
 				04E0F7861ABC3313003A0D8A /* ShopRepositoryTests.swift in Sources */,
 				04E0F78D1ABC935B003A0D8A /* JSONWrapperTests.swift in Sources */,
 			);

@@ -5,6 +5,9 @@ public class TillViewController: UIViewController, UICollectionViewDataSource, U
 
     public var shopRepo: ShopRepository!
     public var shop: Shop!
+    public var order: Order!
+    
+    @IBOutlet public weak var clientNameText: UITextField!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +31,33 @@ public class TillViewController: UIViewController, UICollectionViewDataSource, U
         return cell
     }
     
-    @IBAction func addToBasket(sender: AnyObject) {
+    @IBAction public func addToBasket(sender: UIButton) {
+        if(hasOrder()) {
+        
+        }
+        else if hasClientName(){
+            self.order = Order(clientName: clientNameText.text)
+        }
+        else {
+            showAlert("Please insert the client name")
+        }
+    }
     
+    func hasOrder() -> Bool {
+        return self.order != nil
+    }
+    
+    func hasClientName() -> Bool {
+        return !clientNameText.text.isEmpty
+    }
+    
+    func showAlert(message:String){
+        let alert = UIAlertController(title: "", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let cancelAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action -> Void in
+            //Do some other stuff
+        }
+        alert.addAction(cancelAction)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }
 

@@ -20,8 +20,17 @@ public class ShopRepository {
     }
     
     private func createEntitiesFromDictionary(dict:NSDictionary) -> Shop {
+        let products = self.createProducts(dict["prices"] as NSArray)
+        let shopName = dict["shopName"] as String
+        let address = dict["address"] as String
+        let phone = dict["phone"] as String
+        var shop = Shop(name: shopName , address: address, phone: phone, products: products)
+        
+        return shop
+    }
+    
+    private func createProducts(arrProds: NSArray) -> [Product] {
         var products = [Product]()
-        let arrProds = dict["prices"] as NSArray
         if let dictProducts = arrProds[0] as? NSDictionary {
             for prod  in dictProducts {
                 let name:String = (prod.key as AnyObject? as? String) ?? ""
@@ -30,11 +39,6 @@ public class ShopRepository {
                 products.append(product)
             }
         }
-        let shopName = dict["shopName"] as String
-        let address = dict["address"] as String
-        let phone = dict["phone"] as String
-        var shop = Shop(name: shopName , address: address, phone: phone, products: products)
-        
-        return shop
+        return products
     }
 }

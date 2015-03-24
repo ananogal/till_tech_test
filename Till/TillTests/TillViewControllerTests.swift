@@ -1,6 +1,7 @@
 import Quick
 import Nimble
 import Till
+import UIKit
 
 class TillViewControllerTests: QuickSpec {
     override func spec() {
@@ -23,6 +24,26 @@ class TillViewControllerTests: QuickSpec {
             it("Should initialise a shop Entity"){
                 expect(controller.shop).toNot(beNil())
             }
+            
+            context("when adding a product") {
+                var btn: UIButton!
+                beforeEach() {
+                    btn = UIButton()
+                }
+                
+                it("creates a new order") {
+                    controller.clientNameText.text = "Ana"
+                    controller.addToBasket(btn)
+                    expect(controller.order).toNot(beNil())
+                }
+                
+                it("adds a new item to the order") {
+                    controller.order = Order(clientName: "Ana")
+                    controller.addToBasket(btn)
+                    expect(controller.order.items.count).to(equal(1))
+                }
+            }
+            
         }
     }
 }
