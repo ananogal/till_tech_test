@@ -7,4 +7,8 @@ public class Order {
         self.clientName = clientName
         self.items = [OrderItem]()
     }
+    
+    public func addItem(item:OrderItem) {
+        self.items.append(item)
+    }
 }

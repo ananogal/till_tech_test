@@ -25,6 +25,7 @@
 		938FC5F71AC18A1C00FE8DC6 /* OrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC5F61AC18A1C00FE8DC6 /* OrderTests.swift */; };
 		938FC5F91AC1928000FE8DC6 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC5F81AC1928000FE8DC6 /* OrderItem.swift */; };
 		938FC5FB1AC192A200FE8DC6 /* OrderItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC5FA1AC192A200FE8DC6 /* OrderItemTests.swift */; };
+		938FC5FD1AC1983500FE8DC6 /* ShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC5FC1AC1983500FE8DC6 /* ShopTests.swift */; };
 		93E710181ABE298D00BC8370 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E710171ABE298D00BC8370 /* Shop.swift */; };
 		C4F1C1CB38EF0E9D572D70F7 /* Pods_TillTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17318C9F01CA80CB353FBAA0 /* Pods_TillTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		938FC5F61AC18A1C00FE8DC6 /* OrderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTests.swift; sourceTree = "<group>"; };
 		938FC5F81AC1928000FE8DC6 /* OrderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
 		938FC5FA1AC192A200FE8DC6 /* OrderItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItemTests.swift; sourceTree = "<group>"; };
+		938FC5FC1AC1983500FE8DC6 /* ShopTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTests.swift; sourceTree = "<group>"; };
 		93E710171ABE298D00BC8370 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 				04E0F77F1ABC2D08003A0D8A /* TillViewControllerTests.swift */,
 				938FC5F61AC18A1C00FE8DC6 /* OrderTests.swift */,
 				938FC5FA1AC192A200FE8DC6 /* OrderItemTests.swift */,
+				938FC5FC1AC1983500FE8DC6 /* ShopTests.swift */,
 			);
 			path = TillTests;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			files = (
 				938FC5F71AC18A1C00FE8DC6 /* OrderTests.swift in Sources */,
 				04E0F78B1ABC388D003A0D8A /* FileReaderTests.swift in Sources */,
+				938FC5FD1AC1983500FE8DC6 /* ShopTests.swift in Sources */,
 				04E0F7801ABC2D08003A0D8A /* TillViewControllerTests.swift in Sources */,
 				938FC5FB1AC192A200FE8DC6 /* OrderItemTests.swift in Sources */,
 				04E0F7861ABC3313003A0D8A /* ShopRepositoryTests.swift in Sources */,

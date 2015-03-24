@@ -1,6 +1,10 @@
 
 public class OrderItem {
-    public init() {
+    public var product: Product
+    public var quantity: Int
     
+    public init(product: Product, quantity: Int) {
+        self.product = product
+        self.quantity = quantity
     }
 }

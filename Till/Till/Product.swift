@@ -10,3 +10,9 @@ public struct Product {
         self.price = price
     }
 }
+
+extension Product : Equatable {}
+
+public func ==(productA: Product, productB: Product) -> Bool {
+    return productA.name == productB.name && productA.price == productB.price
+}

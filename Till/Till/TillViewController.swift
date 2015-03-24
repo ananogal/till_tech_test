@@ -33,7 +33,10 @@ public class TillViewController: UIViewController, UICollectionViewDataSource, U
     
     @IBAction public func addToBasket(sender: UIButton) {
         if(hasOrder()) {
-        
+            let index = sender.tag
+            let product = self.shop.productByIndex(index)
+            let item = OrderItem(product: product, quantity: 1)
+//            self.order.addItem(item)
         }
         else if hasClientName(){
             self.order = Order(clientName: clientNameText.text)
