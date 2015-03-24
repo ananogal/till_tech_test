@@ -33,10 +33,15 @@ public class TillViewController: UIViewController, UICollectionViewDataSource, U
     
     @IBAction public func addToBasket(sender: UIButton) {
         if(hasOrder()) {
-            let index = sender.tag
-            let product = self.shop.productByIndex(index)
-            let item = OrderItem(product: product, quantity: 1)
-//            self.order.addItem(item)
+            let product = self.shop.productByIndex(sender.tag)
+            let itemOrder = self.order.items.filter{$0.product == product}
+            if itemOrder.count > 0 {
+                var item = itemOrder.first!
+                item.quantity += 1
+            }
+            else {
+                addItemToOrder(product)
+            }
         }
         else if hasClientName(){
             self.order = Order(clientName: clientNameText.text)
@@ -44,6 +49,11 @@ public class TillViewController: UIViewController, UICollectionViewDataSource, U
         else {
             showAlert("Please insert the client name")
         }
+    }
+    
+    func addItemToOrder(product: Product) {
+        let item = OrderItem(product: product, quantity: 1)
+        self.order.addItem(item)
     }
     
     func hasOrder() -> Bool {
@@ -57,7 +67,6 @@ public class TillViewController: UIViewController, UICollectionViewDataSource, U
     func showAlert(message:String){
         let alert = UIAlertController(title: "", message: message, preferredStyle: UIAlertControllerStyle.Alert)
         let cancelAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action -> Void in
-            //Do some other stuff
         }
         alert.addAction(cancelAction)
         self.presentViewController(alert, animated: true, completion: nil)

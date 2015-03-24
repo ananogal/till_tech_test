@@ -25,7 +25,7 @@ class TillViewControllerTests: QuickSpec {
                 expect(controller.shop).toNot(beNil())
             }
             
-            context("when adding a product") {
+            context("when adding a product to an Order") {
                 var btn: UIButton!
                 beforeEach() {
                     btn = UIButton()
@@ -41,6 +41,21 @@ class TillViewControllerTests: QuickSpec {
                     controller.order = Order(clientName: "Ana")
                     controller.addToBasket(btn)
                     expect(controller.order.items.count).to(equal(1))
+                }
+                
+                it("increases quantity by 1 when product is already in order") {
+                    controller.order = Order(clientName: "Ana")
+                    controller.addToBasket(btn)
+                    controller.addToBasket(btn)
+                    expect(controller.order.items.first!.quantity).to(equal(2))
+                }
+                
+                it("doesn't add a new item if already in order") {
+                    controller.order = Order(clientName: "Ana")
+                    controller.addToBasket(btn)
+                    controller.addToBasket(btn)
+                    expect(controller.order.items.count).to(equal(1)
+                    )
                 }
             }
             
